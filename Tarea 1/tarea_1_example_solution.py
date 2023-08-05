@@ -70,7 +70,7 @@ def separa_letras(Cadena):
         return (estado), (res1), (res2)
     else:
         for char in Cadena:  # Si tiene caracteres especiales
-            if char in "!#$%&'()*+, -.\"/:;<=>?@[\\]^_`{|}~":
+            if char in "!#$%&'()*+, -.\"/:;<=>?@[\]^_`{|}~":
                 estado = -200  # Codigo de error unico
                 res1 = None  # Resultado si hay un error
                 res2 = None  # Resultado si hay un error
