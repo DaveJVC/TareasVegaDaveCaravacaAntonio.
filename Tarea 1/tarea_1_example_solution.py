@@ -20,8 +20,8 @@ def potencia_manual(base, potencia):
     k = 0
     result = 1
     estado = 9999
-    if isinstance(base, int):  # revisa si la base es un entero
-        if isinstance(potencia, int):  # revisa si la potencia es un entero
+    if type(base) == int:  # revisa si la base es un entero
+        if type(potencia) == int:  # revisa si la potencia es un entero
             if base == 0:  # Caso especial. Ademas, se asume que 0^0=0
                 estado = 0
 # como la base y la potencia son numeros, se tiene un codigo de exito
@@ -57,7 +57,7 @@ def separa_letras(Cadena):
     estado = 7777
     res1 = 0
     res2 = 0
-    if isinstance(Cadena, int):  # Si es un numero
+    if type(Cadena) == int:  # Si es un numero
         estado = -100  # Codigo de error unico
         res1 = None  # Resultado si hay un error
         res2 = None  # Resultado si hay un error
@@ -70,7 +70,7 @@ def separa_letras(Cadena):
         return (estado), (res1), (res2)
     else:
         for char in Cadena:  # Si tiene caracteres especiales
-            if char in "!#$%&'()*+, -.\"/:;<=>?@[\\]^_`{|}~":
+            if char in "!#$%&'()*+, -.\"/:;<=>?@[\]^_`{|}~":
                 estado = -200  # Codigo de error unico
                 res1 = None  # Resultado si hay un error
                 res2 = None  # Resultado si hay un error
